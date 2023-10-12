@@ -87,7 +87,7 @@ let username = 'codeup';
 let password = 'notastrongpassword';
 let isPasswordGreaterThan5Chars = password.length > 5;
 console.log(isPasswordGreaterThan5Chars);
-let pwDoesNotContainUsername = password.contains(username);
+let pwDoesNotContainUsername = password.includes(username);
 console.log(pwDoesNotContainUsername);
 let isUsernameGreaterThan20Chars = username.length > 20;
 console.log(isUsernameGreaterThan20Chars);
