@@ -1,6 +1,6 @@
 let a = 1;
-let b = a++; //2
-let c = ++a; //3
+let b = a++; //1
+let c = ++a; //2
 console.log(b);
 console.log(c);
 
