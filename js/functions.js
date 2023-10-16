@@ -72,9 +72,9 @@ let tipPercent = parseFloat(prompt("What percentage of your total bill do you wa
 let total = parseFloat(prompt("What is your bill?"));
 
 if (!isNaN(tipPercent) || !isNaN(total)) {
-    alert(`Your total bill is $${function (x, y) {
+    alert(`Your tip amount is $${function (x, y) {
         x /= 100;
-        return x * y + y;
+        return calculateTip(x, y); 
     }(tipPercent, total).toFixed(2)}`);
 } else {
     alert("You didn't enter real numbers");
