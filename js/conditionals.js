@@ -37,6 +37,10 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 // const analyzeColor = (color) => {
 //     console.log(color);
 // }
+// function analyzeColor(color) {
+//     console.log(color);
+// }
+
 // analyzeColor(randomColor);
 /**
  * TODO:
@@ -45,29 +49,21 @@ const randomColor = colors[Math.floor(Math.random() * colors.length)];
 const analyzeColor = (color) => {
     switch (color) {
         case "red":
-            console.log("Color is red");
-            break;
+            return "Roses are red";
         case "orange":
-            console.log("Color is orange");
-            break;
+            return "Nothing rhymes with orange";
         case "yellow":
-            console.log("Color is yellow");
-            break;
+            return "Bees are yellow and black";
         case "green":
-            console.log("Color is green");
-            break;
+            return "Grass is green";
         case "blue":
-            console.log("Color is blue");
-            break;
+            return "Sky is blue";
         case "indigo":
-            console.log("Color is indigo");
-            break;
+            return "Pokemon indigo";
         case "violet":
-            console.log("Color is violet");
-            break;
+            return "Violet is purple";
         default:
-            console.log("Not a color");
-            break;
+            return "Not a color";
     }
 }
 analyzeColor(randomColor);
@@ -77,8 +73,8 @@ analyzeColor(randomColor);
  * user to your `analyzeColor` function. Alert the return value from your
  * function to show it to the user.
  */
-let userInput = prompt("Pick a color");
-analyzeColor(userInput);
+// let userInput = prompt("Pick a color");
+alert(analyzeColor(prompt("Pick a color")));
 /* ########################################################################## */
 
 /**
@@ -105,13 +101,13 @@ const calculateTotal = (num, price) => {
         case 0:
             return price;
         case 1:
-            return 0.1 * price;
+            return price - 0.1 * price;
         case 2:
-            return 0.25 * price;
+            return price - 0.25 * price;
         case 3:
-            return 0.35 * price;
+            return price - 0.35 * price;
         case 4:
-            return 0.5 * price;
+            return price - 0.5 * price;
         case 5:
             return 0;
     }
@@ -161,7 +157,7 @@ if (confirm("Would you like to enter a number")) {
 
         if (userInput < 0) {
             alert("That's a negative number");
-        } else if ( userInput === 0) {
+        } else if (Number(userInput) === 0) {
             alert("That's a zero");
         } else {
             alert("That's a positive number")
