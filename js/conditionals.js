@@ -96,6 +96,7 @@ alert(analyzeColor(prompt("Pick a color")));
  * Test your function by passing it various values and checking for the expected
  * return value.
  */
+
 const calculateTotal = (num, price) => {
     switch (num) {
         case 0:
