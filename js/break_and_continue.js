@@ -1,7 +1,7 @@
 let userInput;
-while (isNaN(userInput) || userInput % 2 === 0) {
+while (isNaN(userInput) || userInput % 2 === 0 || userInput < 1 || userInput > 50) {
     userInput = parseInt(prompt("Enter an odd number:"));
-    console.log(userInput);
+     console.log(userInput);
 }
 
 for (let i = 1; i <= 50; i++) {
@@ -14,3 +14,4 @@ for (let i = 1; i <= 50; i++) {
     }
     console.log(i);
 }
+
