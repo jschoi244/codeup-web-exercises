@@ -11,3 +11,15 @@ console.log(capitalizeFirstLetter("codeup"));
 
 const replaceMethod = (str) => str.replace(str.charAt(0), str.charAt                (0).toUpperCase());
 console.log(replaceMethod("codeup"));
+
+// 10/19/2023
+let num = 100;
+while (num >= 0) {
+    if (num % 2 === 0) {
+        console.log(num + ' even');
+    } else {
+        console.log(num)
+    }
+
+    num -= 5;
+}
