@@ -31,7 +31,7 @@ for (let i = 1; i <= 1; i++) {
 // 10/20/2023 warmup
 const getEvenNumbers = (num) => {
     let numbers = [];
-    for (let i = 0; i <= num; i ++) {
+    for (let i = 1; i <= num; i ++) {
         if (i % 2 === 0) {
             numbers.push(i);
         }
