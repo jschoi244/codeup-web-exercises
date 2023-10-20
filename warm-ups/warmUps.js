@@ -27,3 +27,19 @@ while (num >= 0) {
 for (let i = 1; i <= 1; i++) {
     console.log(i);
 }
+
+// 10/20/2023 warmup
+const getEvenNumbers = (num) => {
+    let numbers = [];
+    for (let i = 0; i <= num; i ++) {
+        if (i % 2 === 0) {
+            numbers.push(i);
+        }
+    }
+    return numbers;
+}
+
+let x = getEvenNumbers(100);
+for (let i = 0; i < x.length; i++) {
+    console.log(x[i]);
+}
