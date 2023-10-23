@@ -43,3 +43,8 @@ let x = getEvenNumbers(100);
 for (let i = 0; i < x.length; i++) {
     console.log(x[i]);
 }
+
+// 10/23/2023 warmup
+let movies = ["Big Daddy", "Jump Street 22", "The Terminator", "Men in Black", "Harry Potter"];
+movies.sort();
+movies.forEach((movie) => console.log(movie));

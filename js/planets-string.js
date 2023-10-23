@@ -29,6 +29,6 @@
     for (let i = 0; i < planetsArray.length; i++)  {
         ulPlanets += ("<li>" + planetsArray[i] + "</li>");
     }
-    ulPlanets += "</ul";
+    ulPlanets += "</ul>";
     console.log(ulPlanets);
 })();
