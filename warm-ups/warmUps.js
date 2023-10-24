@@ -48,3 +48,26 @@ for (let i = 0; i < x.length; i++) {
 let movies = ["Big Daddy", "Jump Street 22", "The Terminator", "Men in Black", "Harry Potter"];
 movies.sort();
 movies.forEach((movie) => console.log(movie));
+
+// 10/24/2023 warmup
+let cars = [
+    {
+        make: "BMW",
+        model: "535xi",
+        color: "silver",
+    },
+    {
+        make: "Mercedes",
+        model: "e350",
+        color: "white",
+    },
+    {
+        make: "Lexus",
+        model: "es400",
+        color: "white",
+    },
+]
+
+for (let car of cars) {
+    console.log(car);
+}

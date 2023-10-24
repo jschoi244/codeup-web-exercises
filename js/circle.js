@@ -16,7 +16,6 @@
 
             // If doRounding is true, round the result to the nearest integer.
             // Otherwise, output the complete value
-            let roundedArea;
             if (doRounding) {
                 console.log("The rounded area is " + Math.round(circle.getArea()) + " units squared");
             }
