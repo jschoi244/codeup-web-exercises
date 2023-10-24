@@ -18,8 +18,9 @@
             // Otherwise, output the complete value
             if (doRounding) {
                 console.log("The rounded area is " + Math.round(circle.getArea()) + " units squared");
+            } else {
+                console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea() + " units squared");
             }
-            console.log("Area of a circle with radius: " + this.radius + ", is: " + circle.getArea() + " units squared");
         }
     };
 
