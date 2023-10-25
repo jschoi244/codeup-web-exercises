@@ -1,0 +1,15 @@
+.fancy-header {
+    color: purple; /* single line comment */
+    text-decoration: underline;
+}
+
+.image-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 10px; /* Adjust the gap as needed */
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+}
