@@ -13,3 +13,77 @@
     width: 100%;
     height: auto;
 }
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-decoration: underline;
+    color: blue;
+}
+
+body {
+    background-color: lightblue;
+    /* Set the background image */
+    background-image: url('jetbrains://idea/navigate/reference?project=codeup-web-exercises&path=images/1.jpg');
+    /* Define the background image's position */
+    background-position: center top; /* You can adjust this to 'center', 'left', 'right', 'top', 'bottom', or use percentages or pixels */
+    /* Define the background image's size */
+    background-size: cover; /* You can use 'cover', 'contain', or specific dimensions like '100px 100px' */
+}
+
+ul {
+    list-style-type: square; /* You can use 'disc', 'circle', 'square', 'none', or other values */
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* You can specify a font or a font stack */
+}
+
+/* Style for the entire table */
+table {
+    border-collapse: collapse; /* Optional, removes spacing between table cells */
+    width: 100%; /* Optional, make the table width 100% of its container */
+}
+
+/* Style for table cells (<td>) */
+td {
+    padding: 10px; /* Adjust the padding as needed */
+    font-size: 16px; /* Adjust the font size as needed */
+    border: 1px solid #ccc; /* Optional, add borders to the table cells */
+}
+
+/* Style for table rows (<tr>) */
+/* Style for table rows (<tr>) */
+tr {
+    background-color: #f2f2f2; /* Alternate row background color for better readability */
+    color: #333; /* Text color for table rows */
+    transition: background-color 0.3s; /* Add a smooth hover effect */
+}
+
+/* Hover effect for table rows */
+tr:hover {
+    background-color: #ddd; /* Change background color on hover for a highlight effect */
+}
+
+/* Style for normal links */
+a {
+    text-decoration: none; /* Remove the underline from links */
+    color: #0074D9; /* Default link color */
+}
+
+/* Style for visited links */
+a:visited {
+    color: #551A8B; /* Visited link color */
+}
+
+/* Style for links on hover */
+a:hover {
+    color: #FF4136; /* Link color when hovered */
+}
+
+/* Style for active (clicked) links */
+a:active {
+    color: #FF851B; /* Link color when clicked */
+}
