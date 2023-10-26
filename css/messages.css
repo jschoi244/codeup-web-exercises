@@ -1,0 +1,36 @@
+.message-info {
+    background-color: lightblue;
+    color: darkblue;
+    width: 40%;
+    border: 1px darkgray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.message-success {
+    background-color: lightgreen;
+    color: darkgreen;
+    width: 40%;
+    border: 1px darkgray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.message-warning {
+    background-color: yellow;
+    color: brown;
+    width: 40%;
+    border: 1px darkgray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
+.message-error {
+    background-color: pink;
+    color: darkred;
+    width: 40%;
+    border: 1px darkgray;
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+}
