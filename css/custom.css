@@ -1,0 +1,40 @@
+/* Custom CSS to prevent button from wrapping */
+.btn-outline-success {
+    white-space: nowrap;
+}
+/* Custom CSS for positioning the "Sign Up" list item to the right */
+.navbar-nav.sign-up {
+    margin-left: auto;
+}
+
+.jumbotron {
+    background-image: url("/images/pizza.png");
+    height: 346px;
+    background-size: cover;
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+}
+.pizza-world {
+    background-color: rgba(255, 255, 255, 0.6);
+    color: #000000;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+    .jumbotron {
+        display: none; /* Hide the jumbotron for screens with a maximum width of 768px */
+    }
+}
+
+.custom-bg {
+    background-color: blue;
+    color: white;
+}
+
+/*.card-body {*/
+/*    white-space: nowrap;*/
+/*    overflow: hidden;*/
+/*}*/
