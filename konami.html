@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Konami Code</title>
+</head>
+<body>
+<h1>Konami Code</h1>
+
+<script>
+    "use strict";
+    function arraysAreEqual(arr1, arr2) {
+        if (arr1.length !== arr2.length) {
+            return false;
+        }
+
+        for (let i = 0; i < arr1.length; i++) {
+            if (arr1[i] !== arr2[i]) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    let code = ['ArrowUp',
+                'ArrowUp',
+                'ArrowDown',
+                'ArrowDown',
+                'ArrowLeft',
+                'ArrowRight',
+                'ArrowLeft',
+                'ArrowRight',
+                'b',
+                'a'
+    ];
+    let enteredCode = [];
+    document.addEventListener("keyup", event => {
+        enteredCode.push(event.key);
+        if (arraysAreEqual(code, enteredCode)) {
+            console.log("You have 30 lives!");
+        }
+        console.log(event.key)
+    });
+</script>
+</body>
+</html>
