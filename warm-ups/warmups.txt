@@ -8,4 +8,10 @@
     </body>
 </html>
 
-    My ideal web dev job is a remote job working in an interesting field. Interesting jobs include things like implementing machine learning pipelines, innovative products, or products and services that help people. Learning about web apps that serve a large number of people would be a good experience to understand scalable design patterns. Getting experience in the field and then getting hired at FAANG companies would also be one of my goals to see how these big companies structure teams and organize product design. This would be good insight on how these companies are successful.
+My ideal web dev job is a remote job working in an interesting field. Interesting jobs include things like implementing machine learning pipelines, innovative products, or products and services that help people. Learning about web apps that serve a large number of people would be a good experience to understand scalable design patterns. Getting experience in the field and then getting hired at FAANG companies would also be one of my goals to see how these big companies structure teams and organize product design. This would be good insight on how these companies are successful.
+
+S - Come up with and implement an idea that is able to be monetized
+M - If I make at least a dollar from it
+A - Yes, I just have to brainstorm ideas and develop them
+R - Yes, I am in a perfect position to realize these goals
+T - In the short term, come up with ideas. In the long term, actually develop them.
