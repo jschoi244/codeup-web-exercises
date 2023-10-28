@@ -7,27 +7,41 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Mapbox</title>
 
-    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
-    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet'/>
 
 </head>
 <body>
 
 <div id='map' style='width: 400px; height: 300px;'></div>
+<script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+<script src="js/mapbox-geocoder-utils.js"></script>
 <script>
+    let token;
     fetch('api_config.json')
         .then(response => response.json())
         .then(data => {
             mapboxgl.accessToken = data.mapbox_token;
+            token = data.mapbox_token;
+        })
+        .then(() => {
             const map = new mapboxgl.Map({
                 container: 'map', // container ID
                 style: 'mapbox://styles/mapbox/streets-v12', // style URL
                 center: [-74.5, 40], // starting position [lng, lat]
                 zoom: 9, // starting zoom
             });
-        })
-        .catch(error => console.error('Error reading JSON file:', error));
+            geocode("600 Navarro St #350, San Antonio, TX 78205", token).then(result => {
+                console.log(result);
 
+                const lngLat = new mapboxgl.LngLat(result[0], result[1]);
+                const bounds = new mapboxgl.LngLatBounds(lngLat, lngLat);
+
+                map.fitBounds(bounds, {
+                    maxZoom: 20, // Optionally set a maximum zoom level
+                });
+            })
+                .catch(error => console.error('Error reading JSON file:', error));
+        });
 </script>
 </body>
 </html>
