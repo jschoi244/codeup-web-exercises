@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Mapbox</title>
+
+    <script src='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.js'></script>
+    <link href='https://api.mapbox.com/mapbox-gl-js/v2.14.1/mapbox-gl.css' rel='stylesheet' />
+
+</head>
+<body>
+
+<div id='map' style='width: 400px; height: 300px;'></div>
+<script>
+    fetch('api_config.json')
+        .then(response => response.json())
+        .then(data => {
+            mapboxgl.accessToken = data.mapbox_token;
+            const map = new mapboxgl.Map({
+                container: 'map', // container ID
+                style: 'mapbox://styles/mapbox/streets-v12', // style URL
+                center: [-74.5, 40], // starting position [lng, lat]
+                zoom: 9, // starting zoom
+            });
+        })
+        .catch(error => console.error('Error reading JSON file:', error));
+
+</script>
+</body>
+</html>
