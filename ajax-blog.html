@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>AJAX Blog</title>
+</head>
+<body>
+<div id="posts"></div>
+<script>
+    const posts = document.getElementById('posts');
+    fetch('/data/blog.json')
+        .then(response => response.json())
+        .then(data => {
+            for (let post of data) {
+                const entry = document.createElement("div");
+                entry.className = "post";
+                const h1Title = document.createElement("h1");
+                h1Title.innerHTML = post['title'];
+
+                const content = document.createElement("p");
+                content.innerHTML = post['content'];
+
+                const cat = document.createElement("p");
+                cat.innerHTML = post['categories']
+
+                const date = document.createElement("p");
+                date.innerHTML = post['date'];
+
+                entry.appendChild(h1Title);
+                entry.appendChild(content);
+                entry.appendChild(cat);
+                entry.appendChild(date);
+                posts.append(entry);
+            }
+        })
+        .catch(error => {
+            console.error(error); // Handle any errors
+        });
+</script>
+</body>
+</html>
