@@ -30,18 +30,51 @@
                 center: [-74.5, 40], // starting position [lng, lat]
                 zoom: 9, // starting zoom
             });
-            geocode("600 Navarro St #350, San Antonio, TX 78205", token).then(result => {
-                console.log(result);
+            let restaurants = [
+                {
+                    address: "2625 Old Denton Rd Carrollton, TX 75007",
+                    name: "Ajumma's Korean Restaurant",
+                },
+                {
+                    address: "13050 Bee St Suit 160, Farmers Branch, TX 75234",
+                    name: "Rooths Southern Table",
+                },
+                {
+                    address: "12101 Greenville Ave #105, Dallas, TX 75243",
+                    name: "Desta Ethiopian Restaurant",
+                },
+            ];
+            restaurants.forEach((restaurant) => {
+                geocode(restaurant.address, token).then(result => {
+                    console.log(result);
+                    let radiusInMeters = 300;
+                    const bounds = new mapboxgl.LngLatBounds(
+                        [
+                            result[0] - (radiusInMeters / 2 / 111319.9), // Longitude adjustment
+                            result[1] - (radiusInMeters / 2 / 111319.9), // Latitude adjustment
+                        ],
+                        [
+                            result[0] + (radiusInMeters / 2 / 111319.9), // Longitude adjustment
+                            result[1] + (radiusInMeters / 2 / 111319.9), // Latitude adjustment
+                        ]
+                    );
+                    const marker = new mapboxgl.Marker()
+                        .setLngLat(result)
+                        .addTo(map);
 
-                const lngLat = new mapboxgl.LngLat(result[0], result[1]);
-                const bounds = new mapboxgl.LngLatBounds(lngLat, lngLat);
+                    const popup = new mapboxgl.Popup()
+                        .setHTML(restaurant.name); // You can customize the content here
 
-                map.fitBounds(bounds, {
-                    maxZoom: 20, // Optionally set a maximum zoom level
-                });
-            })
-                .catch(error => console.error('Error reading JSON file:', error));
-        });
+                    marker.setPopup(popup);
+                    map.fitBounds(bounds, {
+                        maxZoom: 20, // Optionally set a maximum zoom level
+                    });
+                })
+                    .catch(error => console.error('Error geocoding address:', error));
+            });
+        })
+        .catch(error => console.error('Error reading JSON file:', error));
+
 </script>
 </body>
 </html>
