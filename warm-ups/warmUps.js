@@ -71,3 +71,50 @@ let cars = [
 for (let car of cars) {
     console.log(car);
 }
+
+// 11/1/2023
+let developers = [
+    {
+        name: "Jonathan",
+        languages: {
+            frontend: ["HTML", "JavaScript", "CSS"],
+            backend: ["Java"]
+        }
+    },
+    {
+        name: "Bonnie",
+        languages: {
+            frontend: ["JavaScript"],
+            backend: []
+        }
+    },
+    {
+        name: "Raj",
+        languages: {
+            frontend: [],
+            backend: ["C#", "Java", "Python"]
+        }
+    },
+    {
+        name: "Carmen",
+        languages: {
+            frontend: ["JavaScript", "HTML", "CSS", "React"],
+            backend: ["C#", "Java", "Python", "TypeScript"]
+        }
+    },
+]
+const filterLanguageUser = (devs) => {
+    let devNames = []
+    for (let dev of devs) {
+        if (dev.languages.frontend.includes('JavaScript')) {
+            devNames.push(dev.name);
+        }
+    }
+    return devNames;
+}
+
+let result = [];
+result = filterLanguageUser(developers);
+for (let ele of result) {
+    console.log(ele);
+}
