@@ -113,8 +113,4 @@ const filterLanguageUser = (devs) => {
     return devNames;
 }
 
-let result = [];
-result = filterLanguageUser(developers);
-for (let ele of result) {
-    console.log(ele);
-}
+console.log(filterLanguageUser(developers));
