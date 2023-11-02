@@ -114,3 +114,40 @@ const filterLanguageUser = (devs) => {
 }
 
 console.log(filterLanguageUser(developers));
+
+let elements = [
+    {
+        el: "button",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Submit"
+    },
+    {
+        el: "p",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Our company is better at doing company things than your company."
+    },
+    {
+        el: "h2",
+        style: {
+            backgroundColor: "white",
+            color: "black"
+        },
+        content: "Welcome Back!"
+    }
+];
+
+function changeCss(arrOfElements, bgColor, textColor) {
+    for (let ele of arrOfElements) {
+        ele.style.backgroundColor = bgColor;
+        ele.style.color = textColor;
+    }
+}
+changeCss(elements, 'blue', 'red');
+console.log(elements);
+
