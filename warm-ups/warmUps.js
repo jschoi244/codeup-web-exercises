@@ -9,7 +9,7 @@ console.log(`Hi my name is ${name} and I graduated high school in ${year}.`);
 const capitalizeFirstLetter = (str) => str.charAt(0).toUpperCase() + str.slice(1);
 console.log(capitalizeFirstLetter("codeup"));
 
-const replaceMethod = (str) => str.replace(str.charAt(0), str.charAt                (0).toUpperCase());
+const replaceMethod = (str) => str.replace(str.charAt(0), str.charAt(0).toUpperCase());
 console.log(replaceMethod("codeup"));
 
 // 10/19/2023
@@ -31,7 +31,7 @@ for (let i = 1; i <= 1; i++) {
 // 10/20/2023 warmup
 const getEvenNumbers = (num) => {
     let numbers = [];
-    for (let i = 1; i <= num; i ++) {
+    for (let i = 1; i <= num; i++) {
         if (i % 2 === 0) {
             numbers.push(i);
         }
@@ -148,6 +148,24 @@ function changeCss(arrOfElements, bgColor, textColor) {
         ele.style.color = textColor;
     }
 }
+
 changeCss(elements, 'blue', 'red');
 console.log(elements);
 
+// 11/6/2023 warmups
+
+function fizzBuzz() {
+    for (let i = 1; i <= 100; i++) {
+        if (i % 3 === 0 && i % 5 === 0) {
+            console.log("fizzbuzz");
+        } else if (i % 5 === 0) {
+            console.log("buzz");
+        } else if (i % 3 === 0) {
+            console.log("fizz");
+        } else {
+            console.log(i);
+        }
+    }
+}
+
+fizzBuzz();

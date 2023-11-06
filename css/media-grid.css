@@ -1,0 +1,34 @@
+.container {
+    margin: 0 auto;
+    width: 80%;
+    max-width: 1200px;
+}
+
+.row {
+    width: 100%;
+    margin-bottom: .1em;
+}
+
+.row:after{
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column{
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.one {
+    width: 100%;
+}
+
+.one-third {
+    width: 33%;
+}
+
+.two-thirds {
+    width: 66%;
+}
