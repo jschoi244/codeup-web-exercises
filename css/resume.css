@@ -1,0 +1,25 @@
+.centered-h1 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 64px;
+}
+.centered-h2 {
+    text-align: center;
+    font-weight: bold;
+    font-size: 48px;
+}
+.summary {
+    margin: 60px;
+}
+.info-container {
+    text-align: center;
+}
+hr {
+    border: none; /* Remove the default line style */
+    background-color: green; /* Set the line color to green */
+    height: 5px; /* Set the line thickness to 5px */
+    margin: 0 20px; /* Add a top and bottom margin of 40px and center it horizontally */
+}
+.body-header {
+    color: blue;
+}
