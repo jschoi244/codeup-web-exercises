@@ -1,0 +1,9 @@
+.forecast-cards {
+    display: flex;
+    flex-direction: row;;
+    justify-content: space-between;
+    margin: 20px;
+}
+.search-bar {
+    margin-right: 50px;
+}
